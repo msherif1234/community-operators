@@ -1,0 +1,41 @@
+apiVersion: metallb.metallb.io/v1beta1
+kind: AddressPool
+metadata:
+  name: addresspool-sample
+  namespace: metallb-system
+spec:
+  address-pool:
+    name: default
+    protocol: layer2
+    addresses:
+    - 172.18.255.100-172.18.255.200
+    auto-assign: false
+    avoid-buggy-ips: true  
+    
+---
+
+apiVersion: metallb.metallb.io/v1beta1
+kind: AddressPool
+metadata:
+  name: addresspool-sample
+  namespace: metallb-system
+spec:
+  address-pool:
+    name: gold
+    protocol: layer2
+    addresses:
+    - 172.19.255.100-172.19.255.200
+
+---
+
+apiVersion: metallb.metallb.io/v1beta1
+kind: AddressPool
+metadata:
+  name: addresspool-sample
+  namespace: metallb-system
+spec:
+  address-pool:
+    name: silver
+    protocol: layer2
+    addresses:
+    - 172.20.255.100-172.20.255.200

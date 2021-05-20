@@ -1,0 +1,8 @@
+domain: metallb.io
+multigroup: true
+repo: community-operators/community-operators/metallb-operator
+resources:
+- group: metallb
+  kind: AddressPool
+  version: v1beta1
+version: "2"
